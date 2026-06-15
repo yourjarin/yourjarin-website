@@ -6,6 +6,7 @@
 <title>Your Jarin</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -14,20 +15,34 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#090012;
+background:#080010;
 color:white;
 overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top right,
+rgba(255,105,180,.25),
+transparent 40%);
+pointer-events:none;
 }
 
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px;
-background:rgba(0,0,0,.6);
-backdrop-filter:blur(10px);
+padding:20px;
 position:sticky;
 top:0;
+background:rgba(8,0,16,.85);
+backdrop-filter:blur(12px);
 z-index:999;
 }
 
@@ -39,7 +54,7 @@ text-shadow:0 0 20px #ff4db8;
 }
 
 .telegram-btn{
-padding:12px 24px;
+padding:12px 25px;
 border-radius:30px;
 text-decoration:none;
 color:white;
@@ -48,52 +63,43 @@ box-shadow:0 0 20px #ff4db8;
 }
 
 .hero{
-padding:30px 20px;
-text-align:center;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+gap:40px;
+padding:60px 20px;
 }
 
-.hero img{
-width:100%;
-max-width:450px;
-border-radius:25px;
-box-shadow:0 0 40px #ff4db8;
+.hero-text{
+max-width:500px;
 }
 
-.welcome{
-margin-top:30px;
-letter-spacing:4px;
-font-size:14px;
-color:#ffb3e6;
-}
-
-.hero h1{
-font-size:60px;
+.hero-text h1{
+font-size:72px;
 color:#ff9adf;
-text-shadow:0 0 25px #ff4db8;
-margin-top:10px;
+text-shadow:0 0 30px #ff4db8;
 }
 
-.subtitle{
-font-size:20px;
-letter-spacing:3px;
-margin-top:15px;
-color:#ffb3e6;
-}
-
-.desc{
-max-width:600px;
-margin:20px auto;
+.hero-text p{
+margin-top:20px;
 line-height:1.8;
-font-size:18px;
 color:#ddd;
 }
 
-.button{
-display:inline-block;
-padding:15px 30px;
-margin-top:20px;
-background:linear-gradient(90deg,#ff4db8,#ff8fd8);
+.hero-image img{
+width:100%;
+max-width:450px;
 border-radius:30px;
+box-shadow:0 0 50px #ff4db8;
+}
+
+.cta-btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+border-radius:35px;
+background:linear-gradient(90deg,#ff4db8,#ff8fd8);
 color:white;
 text-decoration:none;
 font-weight:bold;
@@ -102,284 +108,260 @@ box-shadow:0 0 25px #ff4db8;
 
 .features{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-padding:25px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:20px;
+max-width:1200px;
+margin:auto;
 }
 
 .feature{
 background:rgba(255,255,255,.05);
-padding:15px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 0 15px rgba(255,77,184,.3);
-}
-
-.section{
-padding:40px 20px;
-text-align:center;
-}
-
-.section h2{
-font-size:36px;
-color:#ff9adf;
-margin-bottom:25px;
-text-shadow:0 0 15px #ff4db8;
-}
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    padding:20px;
-}
-.gallery img{
-    width:100%;
-    aspect-ratio:3/4;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow:0 0 25px #ff69b4;
-}
-
-
-.services{
-    display:grid;
-    gap:20px;
-}
-
-.card{
-    background:rgba(255,255,255,.05);
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(255,77,184,.4);
-    border:1px solid #ff4db8;
-}
-
-.card h3{
-    font-size:26px;
-    margin-bottom:15px;
-    color:#ffb3e6;
-}
-
-.card p{
-    line-height:1.8;
-}
-    
-.about{
-background:rgba(255,255,255,.05);
-padding:25px;
+padding:20px;
 border-radius:20px;
-max-width:700px;
-margin:auto;
+text-align:center;
 box-shadow:0 0 20px rgba(255,77,184,.3);
 }
 
-.footer{
-padding:40px 20px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.1);
-margin-top:40px;
+.section{
+padding:60px 20px;
 }
 
-.footer a{
+.section-title{
+text-align:center;
+font-size:42px;
 color:#ff9adf;
-text-decoration:none;
+margin-bottom:30px;
+text-shadow:0 0 20px #ff4db8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.gallery img{
+width:100%;
+aspect-ratio:3/4;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,77,184,.4);
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,77,184,.4);
+border:1px solid #ff4db8;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+}
+
+.footer{
+text-align:center;
+padding:40px 20px;
+border-top:1px solid rgba(255,255,255,.1);
+margin-top:50px;
 }
 
 @media(max-width:768px){
 
-.hero h1{
+.hero{
+padding:40px 20px;
+}
+
+.hero-text h1{
 font-size:48px;
+text-align:center;
 }
 
-.gallery{
-grid-template-columns:1fr 1fr;
-}
-
-.features{
-grid-template-columns:1fr 1fr;
+.hero-text{
+text-align:center;
 }
 
 }
+
 </style>
-
 </head>
 <body>
+    <div class="navbar">
+    <div class="logo">yourjarin</div>
 
-<div class="navbar">
-<div class="logo">yourjarin</div>
-
-<a class="telegram-btn"
-href="https://t.me/JarinRahmann">
-Telegram
-</a>
+    <a href="https://t.me/JarinRahmann" class="telegram-btn">
+        Telegram
+    </a>
 </div>
 
 <section class="hero">
 
-<img src="photo4.png">
+    <div class="hero-text">
 
-<div class="welcome">
-WELCOME TO ✨
-</div>
+        <p style="letter-spacing:4px;color:#ffb3e6;">
+            WELCOME TO ✨
+        </p>
 
-<h1>yourjarin</h1>
+        <h1>yourjarin</h1>
 
-<div class="subtitle">
-EXCLUSIVE CONTENT. JUST FOR YOU.
-</div>
+        <p>
+            EXCLUSIVE CONTENT. JUST FOR YOU.
+            <br><br>
+            Welcome to my official website.
+            Explore my gallery, discover premium updates,
+            and stay connected through Telegram.
+        </p>
 
-<div class="desc">
-This is your private access to a more intimate side.<br>
-Join now and unlock exclusive photos,<br>
-videos & much more.
-</div>
+        <a href="https://t.me/JarinRahmann" class="cta-btn">
+            CONTACT ON TELEGRAM
+        </a>
 
-<a class="button"
-href="https://t.me/JarinRahmann">
-CONTACT ON TELEGRAM
-</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="photo4.png">
+    </div>
 
 </section>
 
 <section class="features">
 
-<div class="feature">
-<h3>🔒</h3>
-<p>100% PRIVATE</p>
-</div>
+    <div class="feature">
+        <h3>🔒</h3>
+        <p>100% PRIVATE</p>
+    </div>
 
-<div class="feature">
-<h3>👑</h3>
-<p>PREMIUM CONTENT</p>
-</div>
+    <div class="feature">
+        <h3>👑</h3>
+        <p>PREMIUM CONTENT</p>
+    </div>
 
-<div class="feature">
-<h3>💎</h3>
-<p>TRUSTED & SAFE</p>
-</div>
+    <div class="feature">
+        <h3>💎</h3>
+        <p>TRUSTED & SAFE</p>
+    </div>
 
-<div class="feature">
-<h3>∞</h3>
-<p>UNLIMITED ACCESS</p>
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>✨ PREVIEW GALLERY ✨</h2>
-
-<div class="gallery">
-    <img src="photo1.png">
-    <img src="photo2.png">
-    <img src="photo3.png">
-    <img src="photo4.png">
-    <img src="photo5.png">
-    <img src="photo6.png">
-    <img src="photo7.png">
-    <img src="photo8.png">
-    <img src="photo9.png">
-    <img src="photo10.png">
-    <img src="photo11.png">
-    <img src="photo12.png">
-</div>
+    <div class="feature">
+        <h3>∞</h3>
+        <p>UNLIMITED ACCESS</p>
+    </div>
 
 </section>
 
 <section class="section">
 
-<h2>PREMIUM SERVICES</h2>
+    <h2 class="section-title">
+        ✨ PREVIEW GALLERY ✨
+    </h2>
 
-<div class="services">
+    <div class="gallery">
 
-<div class="card"> <h3> VIDEO CALL SERVICE</h3>
+        <img src="photo1.png">
+        <img src="photo2.png">
+        <img src="photo3.png">
+        <img src="photo4.png">
+        <img src="photo5.png">
+        <img src="photo6.png">
+        <img src="photo7.png">
+        <img src="photo8.png">
+        <img src="photo9.png">
+        <img src="photo10.png">
+        <img src="photo11.png">
+        <img src="photo12.png">
 
-<p>
+    </div>
 
-✔ One-on-one video call<br>
-
-Private & personalized<br>
-
-✔ Real-time interaction
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3> AUDIO CALL SERVICE</h3>
-
-<p>
-
-One-on-one audio call<br>
-
-✔ Talk privately with me<br>
-
-✔ Personal & confidential
-
-</p>
-    
-</div>
-
-<div class="card">
-
-<h3>
-
-REAL SERVICE</h3>
-
-<p>
-
-Real & genuine meet<br>
-
-✔ Full privacy & safety<br>
-
-✓ By appointment only
-
-</p>
-
-</div>
-    
 </section>
+
 <section class="section">
 
-<h2>ABOUT ME</h2>
+    <h2 class="section-title">
+        PREMIUM FEATURES
+    </h2>
 
-<div class="about">
-    <h3>Hi, I'm Your Jarin 💎</h3>
+    <div class="features">
 
-    <p>
-        Welcome to my private world.
-        This space was created for those who want something more personal,
-        exclusive, and genuine.
-    </p>
+        <div class="card">
+            <h3>📷 Exclusive Gallery</h3>
+            <p>
+                Explore photo collections and premium updates.
+            </p>
+        </div>
 
-    <br>
+        <div class="card">
+            <h3>💬 Direct Contact</h3>
+            <p>
+                Stay connected through official Telegram access.
+            </p>
+        </div>
 
-    <p>
-        Here you'll discover premium content, special experiences,
-        and direct access to connect with me in a more meaningful way.
-    </p>
+        <div class="card">
+            <h3>⭐ Premium Experience</h3>
+            <p>
+                Enjoy a clean and premium browsing experience.
+            </p>
+        </div>
 
-    <br>
+    </div>
 
-    <p>
-        Thank you for being here.
-        Your support means everything. ✨💖
-    </p>
-</div>
+</section>
+
+<section class="section">
+
+    <h2 class="section-title">
+        ABOUT ME
+    </h2>
+
+    <div class="card about">
+
+        <h3>Hi, I'm Your Jarin 💎</h3>
+
+        <br>
+
+        <p>
+            Welcome to my private world.
+            This space was created for those who want something more personal,
+            exclusive, and genuine.
+        </p>
+
+        <br>
+
+        <p>
+            Here you'll discover premium content, special experiences,
+            and direct access to connect with me in a more meaningful way.
+        </p>
+
+        <br>
+
+        <p>
+            Thank you for being here.
+            Your support means everything. ✨💖
+        </p>
+
+    </div>
 
 </section>
 
 <div class="footer">
 
-<p>© 2025 Your Jarin</p>
+    <h2 style="color:#ff8fd8;">
+        Your Jarin
+    </h2>
 
-<br>
+    <br>
 
-<a href="https://t.me/JarinRahmann">
-@JarinRahmann
-</a>
+    <p>
+        Official Premium Website
+    </p>
+
+    <br>
+
+    <a href="https://t.me/JarinRahmann">
+        @JarinRahmann
+    </a>
 
 </div>
 
