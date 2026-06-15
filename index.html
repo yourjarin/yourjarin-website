@@ -127,19 +127,19 @@ margin-bottom:25px;
 text-shadow:0 0 15px #ff4db8;
 }
 .gallery{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
     padding:20px;
 }
 
 .gallery img{
     width:100%;
-    height:auto;
-    display:block;
-    border-radius:25px;
-    box-shadow:0 0 30px #ff69b4;
-    transition:.3s;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 25px #ff69b4;
 }
 
 .gallery img:hover{
@@ -221,7 +221,7 @@ Telegram
 
 <section class="hero">
 
-<img src="photo3.png">
+<img src="photo4.png">
 
 <div class="welcome">
 WELCOME TO ✨
@@ -274,7 +274,6 @@ CONTACT ON TELEGRAM
 
 <h2>✨ PREVIEW GALLERY ✨</h2>
 
-<div class="gallery">
 <div class="gallery">
     <img src="photo1.png">
     <img src="photo2.png">
