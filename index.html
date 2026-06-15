@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Your Jarin</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -16,7 +14,7 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#05000f;
+background:#090012;
 color:white;
 overflow-x:hidden;
 }
@@ -25,7 +23,7 @@ overflow-x:hidden;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
+padding:18px;
 background:rgba(0,0,0,.6);
 backdrop-filter:blur(10px);
 position:sticky;
@@ -34,20 +32,19 @@ z-index:999;
 }
 
 .logo{
-font-size:35px;
+font-size:34px;
 font-weight:bold;
-color:#ff69b4;
-text-shadow:0 0 20px #ff69b4;
+color:#ff8fd8;
+text-shadow:0 0 20px #ff4db8;
 }
 
 .telegram-btn{
-text-decoration:none;
-padding:12px 25px;
+padding:12px 24px;
 border-radius:30px;
-background:#ff69b4;
+text-decoration:none;
 color:white;
-font-weight:bold;
-box-shadow:0 0 20px #ff69b4;
+border:1px solid #ff4db8;
+box-shadow:0 0 20px #ff4db8;
 }
 
 .hero{
@@ -56,114 +53,160 @@ text-align:center;
 }
 
 .hero img{
-width:95%;
+width:100%;
 max-width:450px;
 border-radius:25px;
-box-shadow:0 0 40px #ff69b4;
-margin-bottom:25px;
+box-shadow:0 0 40px #ff4db8;
+}
+
+.welcome{
+margin-top:30px;
+letter-spacing:4px;
+font-size:14px;
+color:#ffb3e6;
 }
 
 .hero h1{
 font-size:60px;
-color:#ff8fd3;
-text-shadow:0 0 25px #ff69b4;
-}
-
-.hero h2{
-font-size:22px;
+color:#ff9adf;
+text-shadow:0 0 25px #ff4db8;
 margin-top:10px;
-letter-spacing:2px;
 }
 
-.hero p{
-max-width:700px;
-margin:auto;
-margin-top:20px;
+.subtitle{
+font-size:20px;
+letter-spacing:3px;
+margin-top:15px;
+color:#ffb3e6;
+}
+
+.desc{
+max-width:600px;
+margin:20px auto;
 line-height:1.8;
 font-size:18px;
-opacity:.9;
+color:#ddd;
 }
 
-.card{
-width:90%;
-max-width:900px;
-margin:40px auto;
+.button{
+display:inline-block;
+padding:15px 30px;
+margin-top:20px;
+background:linear-gradient(90deg,#ff4db8,#ff8fd8);
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 25px #ff4db8;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 padding:25px;
-border-radius:25px;
-background:rgba(255,105,180,.08);
-box-shadow:0 0 25px rgba(255,105,180,.5);
 }
 
-.section-title{
+.feature{
+background:rgba(255,255,255,.05);
+padding:15px;
+border-radius:15px;
 text-align:center;
-font-size:35px;
-color:#ff8fd3;
+box-shadow:0 0 15px rgba(255,77,184,.3);
+}
+
+.section{
+padding:40px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:36px;
+color:#ff9adf;
 margin-bottom:25px;
-text-shadow:0 0 20px #ff69b4;
+text-shadow:0 0 15px #ff4db8;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-padding:20px;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
 }
 
 .gallery img{
 width:100%;
-border-radius:20px;
-box-shadow:0 0 20px #ff69b4;
-transition:.3s;
+border-radius:15px;
+box-shadow:0 0 15px rgba(255,77,184,.5);
 }
 
-.gallery img:hover{
-transform:scale(1.03);
+.services{
+display:grid;
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,77,184,.3);
+}
+
+.card h3{
+font-size:26px;
+margin-bottom:15px;
+color:#ffb3e6;
+}
+
+.card p{
+line-height:1.8;
+}
+
+.about{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:20px;
+max-width:700px;
+margin:auto;
+box-shadow:0 0 20px rgba(255,77,184,.3);
 }
 
 .footer{
+padding:40px 20px;
 text-align:center;
-padding:30px;
-margin-top:40px;
 border-top:1px solid rgba(255,255,255,.1);
+margin-top:40px;
 }
 
-.footer p{
-margin:10px 0;
+.footer a{
+color:#ff9adf;
+text-decoration:none;
 }
 
 @media(max-width:768px){
 
-.logo{
-font-size:28px;
-}
-
 .hero h1{
-font-size:45px;
-}
-
-.hero h2{
-font-size:18px;
-}
-
-.hero p{
-font-size:16px;
+font-size:48px;
 }
 
 .gallery{
-grid-template-columns:1fr;
+grid-template-columns:1fr 1fr;
+}
+
+.features{
+grid-template-columns:1fr 1fr;
 }
 
 }
-
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="navbar">
 <div class="logo">yourjarin</div>
 
-<a href="https://t.me/JarinRahmann" class="telegram-btn">
+<a class="telegram-btn"
+href="https://t.me/JarinRahmann">
 Telegram
 </a>
 </div>
@@ -172,121 +215,125 @@ Telegram
 
 <img src="photo3.png">
 
-<h3>WELCOME TO</h3>
+<div class="welcome">
+WELCOME TO ✨
+</div>
 
 <h1>yourjarin</h1>
 
-<h2>EXCLUSIVE CONTENT. JUST FOR YOU.</h2>
+<div class="subtitle">
+EXCLUSIVE CONTENT. JUST FOR YOU.
+</div>
 
-<p>
-This is your private access to a more intimate side.
-<br><br>
-Join now and unlock exclusive photos,
+<div class="desc">
+This is your private access to a more intimate side.<br>
+Join now and unlock exclusive photos,<br>
 videos & much more.
-</p>
+</div>
+
+<a class="button"
+href="https://t.me/JarinRahmann">
+CONTACT ON TELEGRAM
+</a>
 
 </section>
+
+<section class="features">
+
+<div class="feature">
+<h3>🔒</h3>
+<p>100% PRIVATE</p>
+</div>
+
+<div class="feature">
+<h3>👑</h3>
+<p>PREMIUM CONTENT</p>
+</div>
+
+<div class="feature">
+<h3>💎</h3>
+<p>TRUSTED & SAFE</p>
+</div>
+
+<div class="feature">
+<h3>∞</h3>
+<p>UNLIMITED ACCESS</p>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>✨ PREVIEW GALLERY ✨</h2>
+
+<div class="gallery">
+
+<img src="photo1.png">
+<img src="photo2.png">
+<img src="photo4.png">
+<img src="photo5.png">
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>PREMIUM SERVICES</h2>
+
+<div class="services">
 
 <div class="card">
+<h3>📹 VIDEO CALL SERVICE</h3>
+<p>
+✔ One-on-one video call<br>
+✔ Private & personalized<br>
+✔ Real-time interaction
+</p>
+</div>
 
-<h2 class="section-title">About Me</h2>
+<div class="card">
+<h3>📞 AUDIO CALL SERVICE</h3>
+<p>
+✔ One-on-one audio call<br>
+✔ Talk privately with me<br>
+✔ Personal & confidential
+</p>
+</div>
 
-<p style="text-align:center;">
-Hi, I'm Your Jarin. Welcome to my official website.
+<div class="card">
+<h3>❤️ REAL SERVICE</h3>
+<p>
+✔ Real & genuine meet<br>
+✔ Full privacy & safety<br>
+✔ By appointment only
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>ABOUT ME</h2>
+
+<div class="about">
+
+<h3>Hi, I'm Your Jarin.</h3>
+
+<br>
+
+<p>
+Welcome to my official website.
 Thank you for visiting my portfolio and gallery.
 </p>
 
 </div>
 
-<h2 class="section-title">Preview Gallery</h2>
-
-<div class="gallery">
-
-<img src="photo1.png">
-<img src="photo2.png">
-<img src="photo4.png">
-<img src="photo5.png">
-
-</div>
+</section>
 
 <div class="footer">
-
-<h2 style="color:#ff69b4;">Your Jarin</h2>
-
-<p>Official Premium Website</p>
-
-<p>@JarinRahmann</p>
-
-</div>
-
-</body>
-</html
-
-
-</style>
-</head>
-<body>
-
-<header>
-<div class="logo">yourjarin</div>
-
-<a href="https://t.me/JarinRahmann" class="telegram-btn">
-Telegram
-</a>
-</header>
-
-<section class="hero">
-
-<div class="hero-text">
-<h1>Your Jarin</h1>
-
-<p>
-Hi, I'm Your Jarin. Welcome to my official website.
-</p>
-
-<a href="https://t.me/JarinRahmann" class="button">
-Contact on Telegram
-</a>
-</div>
-
-<div class="hero-img">
-<img src="photo3.png">
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Photo Gallery</h2>
-
-<div class="gallery">
-
-<img src="photo1.png">
-<img src="photo2.png">
-<img src="photo3.png">
-<img src="photo4.png">
-<img src="photo5.png">
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>About Me</h2>
-
-<div class="about-box">
-
-<p>
-Hi, I'm Your Jarin. Welcome to my official website.
-Thank you for visiting my portfolio and gallery.
-</p>
-
-</div>
-
-</section>
-
-<footer>
 
 <p>© 2025 Your Jarin</p>
 
@@ -296,59 +343,6 @@ Thank you for visiting my portfolio and gallery.
 @JarinRahmann
 </a>
 
-</footer>
-
-</body>
-</html>
-
-</style>
-</head>
-
-<body>
-
-<div class="hero">
-
-<h1>💖 Your Jarin 💖</h1>
-
-<p>Official Premium Website</p>
-
-<img src="photo3.png" class="main">
-
-<br>
-
-<a href="https://t.me/JarinRahmann" class="btn">
-📱 Join Telegram
-</a>
-
-</div>
-
-<div class="card">
-<h2>✨ Welcome ✨</h2>
-<br>
-<p>
-Welcome to the official website of Your Jarin.
-Explore exclusive photos, updates and premium content.
-</p>
-</div>
-
-<h2 class="section-title">🌸 Photo Gallery 🌸</h2>
-
-<div class="gallery">
-
-<img src="photo1.png">
-
-<img src="photo2.png">
-
-<img src="photo3.png">
-
-<img src="photo4.png">
-
-<img src="photo5.png">
-
-</div>
-
-<div class="footer">
-💗 Your Jarin © 2025
 </div>
 
 </body>
