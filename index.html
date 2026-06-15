@@ -128,22 +128,24 @@ text-shadow:0 0 15px #ff4db8;
 }
 
 .gallery{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
+.gallery{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
     padding:20px;
 }
 
 .gallery img{
     width:100%;
-    aspect-ratio:3/4;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow:0 0 25px #ff69b4;
+    height:auto;
+    display:block;
+    border-radius:25px;
+    box-shadow:0 0 30px #ff69b4;
+    transition:.3s;
 }
 
 .gallery img:hover{
-    transform:scale(1.03);
+    transform:scale(1.02);
 }
 
 .services{
